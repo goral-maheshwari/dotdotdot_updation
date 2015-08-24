@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="src/js/jquery.dotdotdot.js"></script>
+</head>
+
+<style type="text/css">
+  .ellipsis-text a{
+    color: blue;
+  }
+</style>
+<body>
+
+  <div class="ellipsis-text" id="wrapper">
+    Buy Women's Sarees Online. Silk Sarees, Designer Sarees and Wedding Sarees for Ladies. Branded Sarees from Multiple Online Shopping Sites.Buy Women's Sarees Online. Silk Sarees, Designer Sarees and Wedding Sarees for Ladies. Branded Sarees from Multiple Online Shopping Sites.Buy Women's Sarees Online. Silk Sarees, Designer Sarees and Wedding Sarees for Ladies. Branded Sarees from Multiple Online Shopping Sites.Buy Women's Sarees Online. Silk Sarees, Designer Sarees and Wedding Sarees for Ladies. Branded Sarees from Multiple Online Shopping Sites.Buy Women's Sarees Online. Silk Sarees, Designer Sarees and Wedding Sarees for Ladies. Branded Sarees from Multiple Online Shopping Sites
+
+    <a class="readmore">
+      More
+    </a>
+    <a class="less">
+      Less
+    </a>
+  </div>
+
+</body>
+</html>
+
+
+
+  <script type="text/javascript">
+  console.log('yo bay');
+    jQuery('#wrapper').dotdotdot({
+      height: 40,
+      after: 'a.readmore',
+      collapse: 'a.less',
+      accordionBehavior: true,
+      callback: function  (isTruncated, orgContent) {
+        console.log("is truncated = " + isTruncated);
+        console.log("orgContent is " + orgContent);
+      }
+    });
+
+    $('#wrapper').on('click', 'a', function  () {
+      console.log('Original event retained');
+    })
+
+  </script>
